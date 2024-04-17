@@ -45,8 +45,8 @@ public class LoginModel {
 		} catch (Exception e) {
 			return false;
 		} finally {
-			prepState.close();
-			resultSet.close();
+			//prepState.close();
+			//resultSet.close();
 		}
 	}
 	

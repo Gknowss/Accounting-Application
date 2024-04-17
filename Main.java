@@ -1,6 +1,6 @@
 package application;
 
-// Section of code for database
+// Section of code for database 
 
 
 
@@ -28,7 +28,7 @@ public class Main extends Application {
 		try {
 			
 			Parent root = FXMLLoader.load(getClass().getResource("/application/GradeAAccounting.fxml"));
-			Scene scene = new Scene(root,900,900);
+			Scene scene = new Scene(root,900,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();

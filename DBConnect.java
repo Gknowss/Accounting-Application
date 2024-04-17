@@ -12,6 +12,7 @@ public class DBConnect {
 			return conn;
 			
 		} catch (Exception e) {
+			
 			System.out.println(e);
 			return null;
 			

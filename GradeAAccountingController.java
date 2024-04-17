@@ -59,7 +59,6 @@ public class GradeAAccountingController implements Initializable{
 			isConnected.setText("Incorrect username or password");
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -5,23 +5,40 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="316.0" prefWidth="337.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="application.UserController">
+<AnchorPane prefHeight="316.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
    <children>
-      <BorderPane layoutX="7.0" layoutY="1.0" prefHeight="314.0" prefWidth="323.0">
+      <BorderPane layoutX="7.0" layoutY="1.0" prefHeight="379.0" prefWidth="436.0">
          <top>
             <BorderPane BorderPane.alignment="CENTER">
                <center>
-                  <HBox>
+                  <HBox alignment="TOP_CENTER">
                      <children>
-                        <Label fx:id="userLabel" prefHeight="18.0" prefWidth="79.0" text="Welcome" />
-                        <Button mnemonicParsing="false" onAction="#SignOut" text="Logout" />
+                        <Label fx:id="userLabel" contentDisplay="TOP" prefHeight="35.0" prefWidth="215.0" text="Grade A Accounting" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                </center>
             </BorderPane>
          </top>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#SignOut" prefHeight="26.0" prefWidth="86.0" text="Logout" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" text="Invoices" />
+                  <Button mnemonicParsing="false" text="Inventory" />
+                  <Button mnemonicParsing="false" text="Customers" />
+                  <Button mnemonicParsing="false" text="Products" />
+                  <Button mnemonicParsing="false" text="Sales" />
+               </children>
+            </VBox>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>
