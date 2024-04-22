@@ -1,3 +1,5 @@
+package application;
+
 public class Inventory {
     private String inventoryId;
     private String itemName;

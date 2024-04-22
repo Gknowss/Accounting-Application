@@ -1,3 +1,5 @@
+package application;
+
 public class Funding {
     private String vendorId;
     private double availableFunds;
