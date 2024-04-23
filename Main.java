@@ -6,7 +6,7 @@ package application;
 
 // Section of code for frontend
 
-import javafx.application.Application;
+import javafx.application.Application; 
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -27,7 +27,7 @@ public class Main extends Application {
 	public void start(Stage stage) {
 		try {
 			
-			Parent root = FXMLLoader.load(getClass().getResource("/application/GradeAAccounting.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/application/GAA.fxml"));
 			Scene scene = new Scene(root,900,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);

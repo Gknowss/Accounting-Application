@@ -1,112 +1,78 @@
 package application;
-
-import java.util.Date;
-import java.util.List;
-
-public class Invoice {
-    private String invoiceId;
+public class Invoice 
+{
+    // Entities
+    private int invoiceNumber;
     private String customerId;
-    private Date invoiceDate;
-    private List<InvoiceItem> items;
-    private double totalAmount;
+    private double cost;
+    private String department;
+    private String cashier;
 
     // Constructor
-    public Invoice(String invoiceId, String customerId, Date invoiceDate, List<InvoiceItem> items) {
-        this.invoiceId = invoiceId;
+    public Invoice(int invoiceNumber, String customerId, double cost, String department, String cashier) {
+        this.invoiceNumber = invoiceNumber;
         this.customerId = customerId;
-        this.invoiceDate = invoiceDate;
-        this.items = items;
-        this.totalAmount = calculateTotalAmount();
+        this.cost = cost;
+        this.department = department;
+        this.cashier = cashier;
     }
 
-    // Method to calculate total amount
-    private double calculateTotalAmount() {
-        double total = 0;
-        for (InvoiceItem item : items) {
-            total += item.getQuantity() * item.getUnitPrice();
-        }
-        return total;
-    }
-
-    // Getters and Setters
-    public String getInvoiceId() {
-        return invoiceId;
-    }
-
-    public void setInvoiceId(String invoiceId) {
-        this.invoiceId = invoiceId;
+    // Getters and setters 
+    public int getInvoiceNumber() {
+        return invoiceNumber;
     }
 
     public String getCustomerId() {
         return customerId;
     }
 
+    public double getCost() {
+        return cost;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getCashier() {
+        return cashier;
+    }
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
-    public Date getInvoiceDate() {
-        return invoiceDate;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
-    public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-    public List<InvoiceItem> getItems() {
-        return items;
+    public void setCashier(String cashier) {
+        this.cashier = cashier;
     }
 
-    public void setItems(List<InvoiceItem> items) {
-        this.items = items;
+    // Other methods (we will decide later if we need any  )
+    //
+
+    //example but commented :
+    
+      // Example Usage
+    public static void main(String[] args) {
+        Invoice myInvoice = new Invoice(1234, "ABC123", 500.50, "Sales", "John Doe");
+
+        // Accessing entity values
+        System.out.println("Invoice Number: " + myInvoice.getInvoiceNumber());
+        System.out.println("Customer ID: " + myInvoice.getCustomerId());
+        System.out.println("Cost: $" + myInvoice.getCost());
+        System.out.println("Department: " + myInvoice.getDepartment());
+        System.out.println("Cashier: " + myInvoice.getCashier());
     }
-
-    public double getTotalAmount() {
-        return totalAmount;
-    }
-
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-    // end Getters and Setters
-
-}
-
-class InvoiceItem {
-    private String description;
-    private int quantity;
-    private double unitPrice;
-
-    public InvoiceItem(String description, int quantity, double unitPrice) {
-        super();
-        this.description = description;
-        this.quantity = quantity;
-        this.unitPrice = unitPrice;
-    }
-
-    // Getters and Setters
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getUnitPrice() {
-        return unitPrice;
-    }
-
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-    // end Getters, and Setters
+     
+     
 }
