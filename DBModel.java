@@ -71,4 +71,23 @@ public class DBModel {
 		
 	}
 	
+	public boolean isCustomer(int customerId, String name, String email, double phone) throws SQLException{
+		
+		String query = "Insert INTO Customer (customerId, name, email, phone) values(?,?,?,?)";
+		
+		try {
+			PreparedStatement prepState = connection.prepareStatement(query);
+	        prepState.setLong(1, customerId);
+	        prepState.setString(2, name);
+	        prepState.setString(3, email);
+	        prepState.setDouble(4, phone);
+	        
+	        prepState.executeUpdate();
+	        return true;
+		} catch (Exception e) {
+			return false;
+		}
+		
+	}
+	
 }
