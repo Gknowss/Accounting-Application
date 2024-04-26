@@ -33,7 +33,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#InvoiceWindow" text="Invoices" />
                   <Button mnemonicParsing="false" text="Inventory" />
-                  <Button mnemonicParsing="false" text="Customers" />
+                  <Button mnemonicParsing="false" onAction="#CustomerWindow" text="Customers" />
                   <Button mnemonicParsing="false" text="Products" />
                   <Button mnemonicParsing="false" text="Sales" />
                </children>
