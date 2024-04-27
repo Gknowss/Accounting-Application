@@ -35,7 +35,7 @@
                   <Button mnemonicParsing="false" onAction="#InventoryWindow" text ="Inventory" />
                   <Button mnemonicParsing="false" onAction="#CustomerWindow" text="Customers" />
                   <Button mnemonicParsing="false" onAction="#ProductsWindow" text="Products" />
-                  <Button mnemonicParsing="false" text="Sales" />
+                  <Button mnemonicParsing="false" onAction="#SalesOrderWindow" text="Sales" />
                </children>
             </VBox>
          </center>
