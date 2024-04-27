@@ -168,4 +168,99 @@ public class UserController implements Initializable {
 
 	//
 
+	// Method to control button for Inventory
+	public void InventoryWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/InventoryBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label InventoryStat;
+	@FXML
+	private TextField txtInventoryId;
+	@FXML
+	private TextField txtItemName;
+	@FXML
+	private TextField txtPartNum;
+	@FXML
+	private TextField txtPrice;
+	@FXML
+	private TextField txtQuantity;
+
+	public void AddInventory(ActionEvent event) {
+
+		try {
+			if (Model.isInventory(Integer.parseInt(txtInventoryId.getText()), txtName.getText(),
+					Integer.parseInt(txtPartNum.getText()), Double.parseDouble(txtPrice.getText()),
+					Integer.parseInt(txtQuantity.getText()))) {
+				CustomerStat.setText("Created");
+			} else {
+				CustomerStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			CustomerStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+
+	// Method to control button for Product
+	public void ProductsWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/ProductsBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label ProductsStat;
+	@FXML
+	private TextField txtProductId;
+	@FXML
+	private TextField txtPartNumb;
+	@FXML
+	private TextField txtPartName;
+	@FXML
+	private TextField txtVendorId;
+	
+	public void AddProducts(ActionEvent event) {
+
+		try {
+			if (Model.isProduct(Integer.parseInt(txtProductId.getText()), 
+					Double.parseDouble(txtPartNumb.getText()), txtPartName.getText(), 
+					Integer.parseInt(txtVendorId.getText()))) {
+
+				CustomerStat.setText("Created");
+			} else {
+				CustomerStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			CustomerStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+
 }
