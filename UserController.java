@@ -213,7 +213,7 @@ public class UserController implements Initializable {
 	}
 
 	// Method to control button for Product
-	public void ProductsWindow(ActionEvent event) {
+	public void ProductWindow(ActionEvent event) {
 
 		try {
 			((Node) event.getSource()).getScene().getWindow().hide();
@@ -240,13 +240,12 @@ public class UserController implements Initializable {
 	private TextField txtPartName;
 	@FXML
 	private TextField txtVendorId;
-	
-	public void AddProducts(ActionEvent event) {
+
+	public void AddProduct(ActionEvent event) {
 
 		try {
-			if (Model.isProduct(Integer.parseInt(txtProductId.getText()), 
-					Double.parseDouble(txtPartNumb.getText()), txtPartName.getText(), 
-					Integer.parseInt(txtVendorId.getText()))) {
+			if (Model.isProduct(Integer.parseInt(txtProductId.getText()), Double.parseDouble(txtPartNumb.getText()),
+					txtPartName.getText(), Integer.parseInt(txtVendorId.getText()))) {
 
 				CustomerStat.setText("Created");
 			} else {
@@ -258,42 +257,197 @@ public class UserController implements Initializable {
 		}
 
 	}
-	
+
 	// Method to control button for SalesOrder
-		public void SalesOrderWindow(ActionEvent event) {
+	public void SalesOrderWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/SalesOrderBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label SalesStat;
+	@FXML
+	private TextField txtOrderId;
+	@FXML
+	private TextField txtCustId;
+	@FXML
+	private TextField txtOrderDate;
+	@FXML
+	private TextField txtSalesTotal;
+
+	public void AddSalesOrder(ActionEvent event) {
+
+		try {
+			if (Model.isSales(Integer.parseInt(txtOrderId.getText()), Integer.parseInt(txtCustomerId.getText()),
+					txtOrderDate.getText(), Double.parseDouble(txtSalesTotal.getText()))) {
+
+				CustomerStat.setText("Created");
+			} else {
+				CustomerStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			CustomerStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+
+	// Method to control button for Report
+	public void ReportWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/ReportBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label ReportStat;
+	@FXML
+	private TextField txt; // add fields
+
+	public void AddReport(ActionEvent event) {
 
 			try {
-				((Node) event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/SalesOrderBox.fxml").openStream());
-				Scene scene = new Scene(root, 900, 600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
+				if (Model.isReport(...)) {
 
+					CustomerStat.setText("Created");
+				} else {
+					CustomerStat.setText("Error");
+				}
+			} catch (SQLException e) {
+				CustomerStat.setText("External Error");
+				e.printStackTrace();
 			}
 
 		}
 
-		@FXML
-		private Label SalesStat;
-		@FXML
-		private TextField txtOrderId;
-		@FXML
-		private TextField txtCustId;
-		@FXML
-		private TextField txtOrderDate;
-		@FXML
-		private TextField txtSalesTotal;
-		
-		public void AddSalesOrder(ActionEvent event) {
+	// Quarter
+	public void QuarterWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/QuarterBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label QuarterStat;
+	@FXML
+	private TextField txt1; // add fields
+
+	public void AddQuarter(ActionEvent event) {
 
 			try {
-				if (Model.isSales(Integer.parseInt(txtOrderId.getText()), 
-						Integer.parseInt(txtCustomerId.getText()), 
-						txtOrderDate.getText(), Double.parseDouble(txtSalesTotal.getText()))) {
+				if (Model.isQuarter(...)) { //add param
+
+					CustomerStat.setText("Created");
+				} else {
+					CustomerStat.setText("Error");
+				}
+			} catch (SQLException e) {
+				CustomerStat.setText("External Error");
+				e.printStackTrace();
+			}
+
+		}
+	
+	// Employee
+	public void EmployeeWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EmployeeBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label EmployeeStat;
+	@FXML
+	private TextField txt2; // add fields
+
+	public void AddEmployee(ActionEvent event) {
+
+			try {
+				if (Model.isEmployee(...)) { //add param
+
+					CustomerStat.setText("Created");
+				} else {
+					CustomerStat.setText("Error");
+				}
+			} catch (SQLException e) {
+				CustomerStat.setText("External Error");
+				e.printStackTrace();
+			}
+
+		}
+	
+	// Accounts
+	public void AccountWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AccountBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	@FXML
+	private Label AccountStat;
+	@FXML
+	private TextField txt3; // add fields
+
+	public void AddAccount(ActionEvent event) {
+
+			try {
+				if (Model.isAccount(...)) { //add param
 
 					CustomerStat.setText("Created");
 				} else {
