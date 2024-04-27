@@ -127,5 +127,26 @@ public class DBModel {
 		}
 
 	}
+	
+	public boolean isSales(int orderId, int customerId, String orderDate, double salesTotal) throws SQLException {
+
+		String query = "Insert INTO SalesOrder (orderId, customerId, orderDate, salesTotal) values(?,?,?,?)";
+
+		try {
+			PreparedStatement prepState = connection.prepareStatement(query);
+			prepState.setLong(1, orderId);
+			prepState.setLong(2, customerId);
+			prepState.setString(3, orderDate);
+			prepState.setDouble(4, salesTotal);
+
+			prepState.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+
+	}
+	
+	
 
 }
