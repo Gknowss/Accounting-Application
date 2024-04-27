@@ -32,9 +32,9 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <Button mnemonicParsing="false" onAction="#InvoiceWindow" text="Invoices" />
-                  <Button mnemonicParsing="false" text="Inventory" />
+                  <Button mnemonicParsing="false" onAction="#InventoryWindow" text ="Inventory" />
                   <Button mnemonicParsing="false" onAction="#CustomerWindow" text="Customers" />
-                  <Button mnemonicParsing="false" text="Products" />
+                  <Button mnemonicParsing="false" onAction="#ProductsWindow" text="Products" />
                   <Button mnemonicParsing="false" text="Sales" />
                </children>
             </VBox>
