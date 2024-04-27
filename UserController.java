@@ -119,8 +119,6 @@ public class UserController implements Initializable {
 
 	}
 
-	//
-
 	// Method to control button for Customers
 	public void CustomerWindow(ActionEvent event) {
 
@@ -165,8 +163,6 @@ public class UserController implements Initializable {
 		}
 
 	}
-
-	//
 
 	// Method to control button for Inventory
 	public void InventoryWindow(ActionEvent event) {
@@ -262,5 +258,52 @@ public class UserController implements Initializable {
 		}
 
 	}
+	
+	// Method to control button for SalesOrder
+		public void SalesOrderWindow(ActionEvent event) {
+
+			try {
+				((Node) event.getSource()).getScene().getWindow().hide();
+				Stage stage = new Stage();
+				FXMLLoader loader = new FXMLLoader();
+				Pane root = loader.load(getClass().getResource("/application/SalesOrderBox.fxml").openStream());
+				Scene scene = new Scene(root, 900, 600);
+				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+				stage.setScene(scene);
+				stage.show();
+			} catch (Exception e) {
+
+			}
+
+		}
+
+		@FXML
+		private Label SalesStat;
+		@FXML
+		private TextField txtOrderId;
+		@FXML
+		private TextField txtCustId;
+		@FXML
+		private TextField txtOrderDate;
+		@FXML
+		private TextField txtSalesTotal;
+		
+		public void AddSalesOrder(ActionEvent event) {
+
+			try {
+				if (Model.isSales(Integer.parseInt(txtOrderId.getText()), 
+						Integer.parseInt(txtCustomerId.getText()), 
+						txtOrderDate.getText(), Double.parseDouble(txtSalesTotal.getText()))) {
+
+					CustomerStat.setText("Created");
+				} else {
+					CustomerStat.setText("Error");
+				}
+			} catch (SQLException e) {
+				CustomerStat.setText("External Error");
+				e.printStackTrace();
+			}
+
+		}
 
 }
