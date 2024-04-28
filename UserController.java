@@ -1,6 +1,6 @@
 package application;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -20,168 +20,409 @@ public class UserController implements Initializable {
 
 	@FXML
 	private Label userLabel;
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 	}
-	
+
 	public void GetUser(String user) {
-		
+
 		userLabel.setText(user);
-		
+
 	}
-	
+
 	// Method to return to the main menu window
 	// Use this on a button everywhere except main and login screen
 	public void MainWin(ActionEvent event) {
-		
+
 		try {
-			((Node)event.getSource()).getScene().getWindow().hide();
+			((Node) event.getSource()).getScene().getWindow().hide();
 			Stage stage = new Stage();
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/User.fxml").openStream());
-			Scene scene = new Scene(root,900,600);
+			Scene scene = new Scene(root, 900, 600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
-			
+
 		}
-		
+
 	}
-	
+
 	// Method to control button press for Sign Out
 	public void SignOut(ActionEvent event) {
-		
+
 		try {
-			((Node)event.getSource()).getScene().getWindow().hide();
+			((Node) event.getSource()).getScene().getWindow().hide();
 			Stage stage = new Stage();
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/GAA.fxml").openStream());
-			Scene scene = new Scene(root,900,600);
+			Scene scene = new Scene(root, 900, 600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
-			
+
 		}
-		
+
 	}
-	
+
 // Functions below made to switch from window to window
-	
+
 	public DBModel Model = new DBModel();
-	
+
 	// Method to control button for Invoices
 	public void InvoiceWindow(ActionEvent event) {
-		
+
 		try {
-			((Node)event.getSource()).getScene().getWindow().hide();
+			((Node) event.getSource()).getScene().getWindow().hide();
 			Stage stage = new Stage();
 			FXMLLoader loader = new FXMLLoader();
 			Pane root = loader.load(getClass().getResource("/application/InvoiceBox.fxml").openStream());
-			Scene scene = new Scene(root,900,600);
+			Scene scene = new Scene(root, 900, 600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 		} catch (Exception e) {
-			
+
 		}
-		
+
+	}
+
+	public void InvoiceAddWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AddInvoice.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void InvoiceEditWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EditInvoice.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void InvoiceDeleteWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/DeleteInvoice.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	// Method to control button for Inventory
+	public void InventoryWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/InventoryBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void InventoryAddWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AddInventory.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void InventoryEditWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EditInventory.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void InventoryDeleteWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/DeleteInventory.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	// Method to control button for Products
+	public void ProductWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/ProductsBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void ProductAddWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AddProduct.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void ProductEditWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EditProduct.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void ProductDeleteWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/DeleteProduct.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	// Method to control button for Customers
+	public void CustomerWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/CustomerBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void CustomerAddWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AddCustomer.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void CustomerEditWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EditCustomer.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void CustomerDeleteWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/DeleteCustomer.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
 	}
 	
-	// Method to control button for Inventory
-		public void InventoryWindow(ActionEvent event) {
-			
-			try {
-				((Node)event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/InventoryBox.fxml").openStream());
-				Scene scene = new Scene(root,900,600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
-				
-			}
-			
-		}
-		
-		// Method to control button for Products
-		public void ProductWindow(ActionEvent event) {
-			
-			try {
-				((Node)event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/ProductsBox.fxml").openStream());
-				Scene scene = new Scene(root,900,600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
-				
-			}
-			
-		}
-		
-		// Method to control button for Invoices
-		public void CustomerWindow(ActionEvent event) {
-			
-			try {
-				((Node)event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/CustomerBox.fxml").openStream());
-				Scene scene = new Scene(root,900,600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
-				
-			}
-			
-		}
-		
-		// Method to control button for Invoices
-		public void SalesOrderWindow(ActionEvent event) {
-			
-			try {
-				((Node)event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/SalesOrderBox.fxml").openStream());
-				Scene scene = new Scene(root,900,600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
-				
-			}
-			
-		}
-		
-		public void InvoiceAddWindow(ActionEvent event) {
-			
-			try {
-				((Node)event.getSource()).getScene().getWindow().hide();
-				Stage stage = new Stage();
-				FXMLLoader loader = new FXMLLoader();
-				Pane root = loader.load(getClass().getResource("/application/InvoiceBoxAdd.fxml").openStream());
-				Scene scene = new Scene(root,900,600);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				stage.setScene(scene);
-				stage.show();
-			} catch (Exception e) {
-				
-			}
-			
-		}
 	
+	/*
+	// Method to control button for SalesOrder
+	public void SalesOrderWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/SalesOrderBox.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void SalesOrderAddWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/AddSalesOrder.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void SalesOrderEditWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/EditSalesOrder.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	public void SalesOrderDeleteWindow(ActionEvent event) {
+
+		try {
+			((Node) event.getSource()).getScene().getWindow().hide();
+			Stage stage = new Stage();
+			FXMLLoader loader = new FXMLLoader();
+			Pane root = loader.load(getClass().getResource("/application/DeleteSalesOrder.fxml").openStream());
+			Scene scene = new Scene(root, 900, 600);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+		} catch (Exception e) {
+
+		}
+
+	}
+	*/
+
 // Functions below made for individual scene functions with Database
-		
+
 	@FXML
 	private Label InvoiceStat;
 	@FXML
@@ -194,11 +435,12 @@ public class UserController implements Initializable {
 	private TextField txtItems;
 	@FXML
 	private TextField txtAmt;
-	
-	public void EditInvoice (ActionEvent event) {
-		
+
+	public void EditInvoice(ActionEvent event) {
+
 		try {
-			if (Model.isInvoiceMake(Integer.parseInt(txtDi.getText()) ,Integer.parseInt(txtId.getText()), txtDate.getText(), txtItems.getText(), Float.parseFloat(txtAmt.getText()))) {
+			if (Model.isInvoiceMake(Integer.parseInt(txtDi.getText()), Integer.parseInt(txtId.getText()),
+					txtDate.getText(), txtItems.getText(), Float.parseFloat(txtAmt.getText()))) {
 				InvoiceStat.setText("Created");
 			} else {
 				InvoiceStat.setText("Error");
@@ -207,7 +449,90 @@ public class UserController implements Initializable {
 			InvoiceStat.setText("External Error");
 			e.printStackTrace();
 		}
-		
+
 	}
 
+	@FXML
+	private Label InventoryStat;
+	@FXML
+	private TextField txtInventoryId;
+	@FXML
+	private TextField txtItemName;
+	@FXML
+	private TextField txtPartNum;
+	@FXML
+	private TextField txtPrice;
+	@FXML
+	private TextField txtQuantity;
+
+	public void EditInventory(ActionEvent event) {
+
+		try {
+			if (Model.isInventoryMake(Integer.parseInt(txtInventoryId.getText()), txtItemName.getText(),
+					txtPartNum.getText(), Float.parseFloat(txtPrice.getText()),
+					Integer.parseInt(txtQuantity.getText()))) {
+				InventoryStat.setText("Created");
+			} else {
+				InventoryStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			InventoryStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+
+	@FXML
+	private Label CustomerStat;
+	@FXML
+	private TextField txtCustomerId;
+	@FXML
+	private TextField txtName;
+	@FXML
+	private TextField txtEmail;
+	@FXML
+	private TextField txtPhone;
+
+	public void EditCustomer(ActionEvent event) {
+
+		try {
+			if (Model.isCustMake(Integer.parseInt(txtCustomerId.getText()), txtName.getText(), txtEmail.getText(),
+					txtPhone.getText())) {
+				CustomerStat.setText("Created");
+			} else {
+				CustomerStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			CustomerStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+	
+	@FXML
+	private Label ProductsStat;
+	@FXML
+	private TextField txtProductId;
+	@FXML
+	private TextField txtPartNumb;
+	@FXML
+	private TextField txtPartName;
+
+	public void AddProduct(ActionEvent event) {
+
+		try {
+			if (Model.isProdMake(Integer.parseInt(txtProductId.getText()),txtPartNumb.getText(),
+					txtPartName.getText())) {
+
+				ProductsStat.setText("Created");
+			} else {
+				ProductsStat.setText("Error");
+			}
+		} catch (SQLException e) {
+			ProductsStat.setText("External Error");
+			e.printStackTrace();
+		}
+
+	}
+	
 }
