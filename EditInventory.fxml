@@ -9,17 +9,17 @@
 <AnchorPane prefHeight="360.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
    <children>
       <AnchorPane layoutX="-83.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="150.0" layoutY="32.0" text="Edit a Inventory">
+      <Label layoutX="301.0" layoutY="46.0" style="-fx-font-family: Arial; -fx-text-fill: white;" text="Edit a Inventory">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#InventoryWindow" text="Back " />
-      <TextField fx:id="txtInventoryId" layoutX="125.0" layoutY="127.0" promptText="Inventory ID:" />
-      <TextField fx:id="txtItemName" layoutX="125.0" layoutY="167.0" promptText="Item Name   :" />
-      <TextField fx:id="txtPartNum" layoutX="125.0" layoutY="207.0" promptText="Part Number :" />
-      <TextField fx:id="txtPrice" layoutX="125.0" layoutY="247.0" promptText="Unit Price  :" />
-      <TextField fx:id="txtQuantity" layoutX="125.0" layoutY="287.0" promptText="Quantity    :" />
-      <Button layoutX="450.0" layoutY="309.0" mnemonicParsing="false" onAction="#InventoryEditWindow" text="Confirm Editing" />
+      <Button layoutX="262.0" layoutY="322.0" mnemonicParsing="false" onAction="#InventoryWindow" prefWidth="101.0" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Back " />
+      <TextField fx:id="txtInventoryId" layoutX="325.0" layoutY="122.0" promptText="Inventory ID:" />
+      <TextField fx:id="txtItemName" layoutX="325.0" layoutY="162.0" promptText="Item Name: " />
+      <TextField fx:id="txtPartNum" layoutX="325.0" layoutY="202.0" promptText="Part Number: " />
+      <TextField fx:id="txtPrice" layoutX="325.0" layoutY="242.0" promptText="Unit Price: " />
+      <TextField fx:id="txtQuantity" layoutX="325.0" layoutY="282.0" promptText="Quantity: " />
+      <Button layoutX="424.0" layoutY="322.0" mnemonicParsing="false" onAction="#InventoryEditWindow" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Confirm Editing" />
    </children>
 </AnchorPane>

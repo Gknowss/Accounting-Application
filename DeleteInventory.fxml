@@ -9,13 +9,13 @@
 <AnchorPane prefHeight="360.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
    <children>
       <AnchorPane layoutX="-83.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="150.0" layoutY="32.0" text="Delete a Inventory">
+      <Label layoutX="301.0" layoutY="46.0" style="-fx-font-family: Arial; -fx-text-fill: white;" text="Delete a Inventory">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#InventoryWindow" text="Back " />
-      <TextField fx:id="txtInventoryId" layoutX="125.0" layoutY="127.0" promptText="Inventory ID:" />
-      <Button layoutX="450.0" layoutY="309.0" mnemonicParsing="false" onAction="#InventoryDeleteWindow" text="Confirm Deleteing" />
+      <Button layoutX="262.0" layoutY="322.0" mnemonicParsing="false" onAction="#InventoryWindow" prefWidth="101.0" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Back " />
+      <TextField fx:id="txtInventoryId" layoutX="325.0" layoutY="122.0" promptText="Inventory ID:" />
+      <Button layoutX="424.0" layoutY="322.0" mnemonicParsing="false" onAction="#InventoryDeleteWindow" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Confirm Deleteing" />
    </children>
 </AnchorPane>
