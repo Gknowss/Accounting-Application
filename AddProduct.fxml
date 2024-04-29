@@ -9,15 +9,15 @@
 <AnchorPane prefHeight="360.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
    <children>
       <AnchorPane layoutX="-83.0" layoutY="-128.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="150.0" layoutY="32.0" text="Add a Product">
+      <Label layoutX="301.0" layoutY="46.0" style="-fx-font-family: Arial; -fx-text-fill: white;" text="Add a Product">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#ProductWindow" text="Back " />
-      <TextField fx:id="txtProductId" layoutX="125.0" layoutY="127.0" promptText="Prodyct (ID #))   : " />
-      <TextField fx:id="txtPartNumb" layoutX="125.0" layoutY="167.0" promptText="Part Number     :" />
-      <TextField fx:id="txtPartName" layoutX="125.0" layoutY="203.0" promptText="Part Name    :" />
-      <Button layoutX="450.0" layoutY="309.0" mnemonicParsing="false" onAction="#ProductAddWindow" text="Confirm Adding" />
+      <Button layoutX="262.0" layoutY="262.0" mnemonicParsing="false" onAction="#ProductWindow" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Back " />
+      <TextField fx:id="txtProductId" layoutX="325.0" layoutY="122.0" promptText="Prodyct (ID #): " />
+      <TextField fx:id="txtPartNumb" layoutX="325.0" layoutY="162.0" promptText="Part Number: " />
+      <TextField fx:id="txtPartName" layoutX="325.0" layoutY="202.0" promptText="Part Name: " />
+      <Button layoutX="424.0" layoutY="262.0" mnemonicParsing="false" onAction="#ProductAddWindow" style="-fx-background-color: rgb(0, 0, 255); -fx-text-fill: white;" text="Confirm Adding" />
    </children>
 </AnchorPane>
