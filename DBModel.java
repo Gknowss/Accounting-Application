@@ -295,4 +295,67 @@ public class DBModel {
 			
 		}
 	
-}
+	public boolean isSalesMake(int di, int id, String date, String items, float amount) throws SQLException {
+		
+		String query = "INSERT INTO SalesOrder(orderId, customerId, orderDate, item, totalAmount) VALUES(?,?,?,?,?)";
+		
+		try {
+			PreparedStatement prepState = connection.prepareStatement(query);
+			prepState.setLong(1, di);
+			prepState.setLong(2, id);
+			prepState.setString(3,  date);
+			prepState.setString(4,  items);
+			prepState.setDouble(5, amount);
+			
+			prepState.executeUpdate();
+			return true;
+			
+		} catch (Exception e) {
+			System.out.print(e);
+			return false;
+		} 
+		
+	}
+	
+	public boolean isSalesEdit(int di, int id, String date, String items, float amount) throws SQLException {
+			
+			String query = "UPDATE SalesOrder SET customerId = ?, orderDate = ?, item = ?, totalAmount = ? WHERE orderId = ?";
+			
+			try {
+				PreparedStatement prepState = connection.prepareStatement(query);
+				prepState.setLong(1, id);
+				prepState.setString(2,  date);
+				prepState.setString(3,  items);
+				prepState.setDouble(4, amount);
+				prepState.setLong(5, di);
+				
+				prepState.executeUpdate();
+				return true;
+				
+			} catch (Exception e) {
+				System.out.print(e);
+				return false;
+			} 
+			
+		}
+	
+	public boolean isSalesDelete(int di) throws SQLException {
+			
+			String query = "DELETE FROM SalesOrder WHERE orderId = ?";
+			
+			try {
+				PreparedStatement prepState = connection.prepareStatement(query);
+				prepState.setLong(1, di);
+				
+				prepState.executeUpdate();
+				return true;
+				
+			} catch (Exception e) {
+				System.out.print(e);
+				return false;
+			} 
+			
+		}
+	
+	
+} // end of class
