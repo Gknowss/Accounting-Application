@@ -6,66 +6,59 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="685.0" prefWidth="1214.0" style="-fx-background-color: rgb(0, 128, 128);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
    <children>
-      <AnchorPane layoutX="58.0" layoutY="126.0" prefHeight="547.0" prefWidth="1079.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <AnchorPane layoutX="58.0" layoutY="126.0" prefHeight="547.0" prefWidth="1079.0" style="-fx-background-color: white; -fx-background-radius: 3;">
          <children>
-            <ImageView fitHeight="154.0" fitWidth="149.0" layoutX="50.0" layoutY="18.0">
+            <ImageView fitHeight="154.0" fitWidth="149.0" layoutX="89.0" layoutY="18.0">
                 <image>
                     <Image url="file:/Users/khaikoh/Downloads/gradeA.png" />
                 </image>
             </ImageView>
-            <Button alignment="CENTER" layoutX="336.0" layoutY="18.0" mnemonicParsing="false" onAction="#InvoiceWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Invoices" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="418.0" layoutY="18.0" mnemonicParsing="false" onAction="#InvoiceWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="Invoices" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font name="Krub Medium" size="20.0" />
             </font>
          </Button>
-         <Button alignment="CENTER" layoutX="502.0" layoutY="18.0" mnemonicParsing="false" onAction="#InventoryWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Inventory" textFill="WHITE">
+         <Button alignment="CENTER" layoutX="584.0" layoutY="18.0" mnemonicParsing="false" onAction="#InventoryWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="Inventory" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font name="Krub Medium" size="20.0" />
             </font>
          </Button>
-         <Button alignment="CENTER" layoutX="660.0" layoutY="18.0" mnemonicParsing="false" onAction="#CustomerWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Customer" textFill="WHITE">
+         <Button alignment="CENTER" layoutX="747.0" layoutY="18.0" mnemonicParsing="false" onAction="#CustomerWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="Customer" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font name="Krub Medium" size="20.0" />
             </font>
          </Button>
-         <Button alignment="CENTER" layoutX="820.0" layoutY="18.0" mnemonicParsing="false" onAction="#ProductWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Product" textFill="WHITE">
+         <Button alignment="CENTER" layoutX="418.0" layoutY="75.0" mnemonicParsing="false" onAction="#ProductWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="Product" textFill="WHITE">
             <font>
-               <Font size="20.0" />
+               <Font name="Krub Medium" size="20.0" />
             </font>
          </Button>
-            <Button alignment="CENTER" layoutX="332.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Button1" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="584.0" layoutY="75.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="SalesOrder" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Krub Medium" size="20.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="498.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Button2" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="747.0" layoutY="75.0" mnemonicParsing="false" onAction="#ProductWindow" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 128, 128); -fx-background-radius: 12;" text="Quarter" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Krub Medium" size="20.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="656.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Button3" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button alignment="CENTER" layoutX="816.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: B9B6B6; -fx-background-radius: 30;" text="Button4" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
+            <AnchorPane layoutX="89.0" layoutY="172.0" prefHeight="352.0" prefWidth="902.0" style="-fx-background-color: rgb(0, 140, 140); width: 88px; height: 79px; left: 423px; top: 108px; background: #DBDBDB; width: 88px; height: 79px; left: 423px; top: 108px; background: #DBDBDB;" />
          </children>
       </AnchorPane>
-      <Label fx:id="userLabel" contentDisplay="TOP" layoutX="77.0" layoutY="49.0" prefHeight="35.0" prefWidth="215.0" text="Grade A Accounting" textAlignment="CENTER" textFill="BLUE">
+      <Label fx:id="userLabel" contentDisplay="TOP" layoutX="77.0" layoutY="49.0" prefHeight="35.0" prefWidth="232.0" text="Grade A Accounting" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font name="Krub SemiBold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="979.0" layoutY="51.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 0, 255); -fx-background-radius: 39;" text="Logout" textFill="WHITE">
+      <Button layoutX="979.0" layoutY="51.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: rgb(0, 0, 255); -fx-background-radius: 10;" text="Logout" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
